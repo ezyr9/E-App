@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/all"
+        android:title="All"
+        android:icon="@drawable/ic_all"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/one"
+        android:title="One"
+        android:icon="@drawable/ic_catone"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/two"
+        android:title="TWo"
+        android:icon="@drawable/ic_cattwo"
+        app:showAsAction="always"/>
+</menu>
