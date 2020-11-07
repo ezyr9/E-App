@@ -27,7 +27,7 @@ public class OneDetailActivity extends AppCompatActivity {
 
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
 
 
         imageView = findViewById(R.id.image_detail);

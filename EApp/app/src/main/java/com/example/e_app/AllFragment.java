@@ -23,62 +23,18 @@ import com.squareup.picasso.Callback;
 import com.squareup.picasso.NetworkPolicy;
 import com.squareup.picasso.Picasso;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link AllFragment newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class AllFragment extends Fragment {
 
-    /*// TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public AllFragment() {
-        // Required empty public constructor
-    }
-
-    *//**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment AllFragment.
-     *//*
-    // TODO: Rename and change types and number of parameters
-    public static AllFragment newInstance(String param1, String param2) {
-        AllFragment fragment = new AllFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }*/
-
-
-    private RecyclerView allRCV;
+    private RecyclerView recyclerViewOne;
     private RecyclerView recyclerViewTwo;
 
 
     //Firebase
 
     private DatabaseReference mOneDatabase;
-    private  DatabaseReference mTwoDatabase;
+    private DatabaseReference mTwoDatabase;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -93,22 +49,21 @@ public class AllFragment extends Fragment {
 
         //ONE
 
-        allRCV = myview.findViewById(R.id.recycler_all);
+        recyclerViewOne = myview.findViewById(R.id.recycler_one);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL,false);
         layoutManager.setReverseLayout(true);
         layoutManager.setStackFromEnd(true);
-        allRCV.setHasFixedSize(true);
-        allRCV.setLayoutManager(layoutManager);
+        recyclerViewOne.setHasFixedSize(true);
+        recyclerViewOne.setLayoutManager(layoutManager);
 
         //TWO
+
         recyclerViewTwo = myview.findViewById(R.id.recycler_two);
         LinearLayoutManager layoutManagerTwo = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL,false);
         layoutManagerTwo.setReverseLayout(true);
         layoutManagerTwo.setStackFromEnd(true);
         recyclerViewTwo.setHasFixedSize(true);
         recyclerViewTwo.setLayoutManager(layoutManagerTwo);
-
-
 
 
         return myview;
@@ -139,9 +94,6 @@ public class AllFragment extends Fragment {
 
                         startActivity(intent);
 
-
-
-
                     }
                 });
 
@@ -150,7 +102,11 @@ public class AllFragment extends Fragment {
 
 
 
-        allRCV.setAdapter(adapterOne);
+        recyclerViewOne .setAdapter(adapterOne);
+
+
+
+        /////////////////////////////////
 
 
         FirebaseRecyclerAdapter<Data, TwoViewHolder> adapterTwo = new FirebaseRecyclerAdapter<Data, TwoViewHolder>(Data.class, R.layout.item_data,TwoViewHolder.class ,mTwoDatabase) {
@@ -182,6 +138,10 @@ public class AllFragment extends Fragment {
 
 
     }
+
+    ///ONEVIEWHOLDER
+
+
     public static class OneViewHolder extends RecyclerView.ViewHolder{
 
 

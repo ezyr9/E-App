@@ -40,5 +40,12 @@
         </LinearLayout>
 
     </ScrollView>
+    <Button
+        android:id="@+id/button_buy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#23a7d8"
+        android:text="BUY" />
+
 
 </LinearLayout>
