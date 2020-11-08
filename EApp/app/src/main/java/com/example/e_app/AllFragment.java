@@ -74,7 +74,8 @@ public class AllFragment extends Fragment {
 
         super.onStart();
 
-        FirebaseRecyclerAdapter<Data, OneViewHolder>  adapterOne = new FirebaseRecyclerAdapter<Data, OneViewHolder>(Data.class, R.layout.item_data, OneViewHolder.class, mOneDatabase) {
+        FirebaseRecyclerAdapter<Data, OneViewHolder>  adapterOne = new FirebaseRecyclerAdapter<Data, OneViewHolder>(
+                Data.class, R.layout.item_data, OneViewHolder.class, mOneDatabase) {
             @Override
             protected void populateViewHolder(OneViewHolder oneViewHolder, Data data, int i) {
 

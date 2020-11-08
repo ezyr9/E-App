@@ -17,6 +17,11 @@ public class Data {
         this.description = description;
         this.id = id;
     }
+    public Data(String image, String title, String description){
+        this.image = image;
+        this.title = title;
+        this.description = description;
+    }
 
     public String getImage() {
         return image;

@@ -41,7 +41,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="2dp"
-                    android:text="Post Title"
+                    android:text="Name: "
                     android:id="@+id/post_title"
                     android:maxLines="1"
                     android:textAppearance="?android:textAppearanceMedium"
@@ -51,7 +51,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Post Description"
+                    android:text="Price:"
                     android:id="@+id/post_description"
                     android:layout_below="@+id/post_title"
                     android:layout_margin="2dp"

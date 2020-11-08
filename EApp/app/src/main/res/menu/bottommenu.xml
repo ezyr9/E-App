@@ -4,16 +4,17 @@
 
     <item android:id="@+id/all"
         android:title="All"
-        android:icon="@drawable/ic_real_all"
+        android:icon="@drawable/ic_all"
         app:showAsAction="always"/>
 
     <item android:id="@+id/one"
-        android:title="Food"
-        android:icon="@drawable/ic_food"
+        android:title="Phone"
+        android:icon="@drawable/ic_phone"
         app:showAsAction="always"/>
 
     <item android:id="@+id/two"
-        android:title="Drink"
-        android:icon="@drawable/ic_water"
+        android:title="Laptop"
+        android:icon="@drawable/ic_desktop"
         app:showAsAction="always"/>
+
 </menu>
